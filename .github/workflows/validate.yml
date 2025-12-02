@@ -4,6 +4,7 @@ on:
   pull_request:
     paths:
       - "default.json"
+      - ".github/workflows/validate.yml"
   workflow_dispatch:
 
 permissions: {}
