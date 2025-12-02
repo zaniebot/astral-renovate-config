@@ -22,6 +22,6 @@ jobs:
           docker run --rm -v \
             "${{ github.workspace }}:/workspace" \
             -w /workspace \
-            ghcr.io/renovatebot/renovate:42 \
+            ghcr.io/renovatebot/renovate:latest \
             renovate-config-validator \
             default.json
