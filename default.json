@@ -34,7 +34,7 @@
             "commitMessageSuffix": "for {{manager}}"
         },
         {
-            "description": "Disable minimum release age checks for our own packages",
+            "description": "Disable minimum release age checks for our own Python packages",
             "matchDatasources": [
                 "pypi"
             ],
@@ -44,6 +44,17 @@
                 "ty"
             ],
             "minimumReleaseAge": null
+        },
+        {
+            "description": "Disable minimum release age checks for our own pre-commit hooks",
+            "matchManagers": [
+                "pre-commit"
+            ],
+            "matchPackageNames": [
+                "astral-sh/ruff-pre-commit",
+                "astral-sh/uv-pre-commit",
+                "astral-sh/ty-pre-commit"
+            ]
         }
     ],
     "vulnerabilityAlerts": {
