@@ -72,6 +72,15 @@
       groupName: '{{manager}} lockfile updates',
       commitMessageSuffix: 'for {{manager}}',
     },
+    // GitHub Actions: disable minimum release age for our own actions.
+    {
+      description: 'Disable minimum release age checks for our own GitHub Actions',
+      matchManagers: ['github-actions'],
+      matchPackageNames: [
+        'astral-sh/*',
+      ],
+      minimumReleaseAge: null,
+    },
     // Python: disable minimum release age for our own packages.
     {
       description: 'Disable minimum release age checks for our own Python packages',
@@ -84,9 +93,7 @@
       description: 'Disable minimum release age checks for our own pre-commit hooks',
       matchManagers: ['pre-commit'],
       matchPackageNames: [
-        'astral-sh/ruff-pre-commit',
-        'astral-sh/uv-pre-commit',
-        'astral-sh/ty-pre-commit',
+        'astral-sh/*',
       ],
     },
   ],
